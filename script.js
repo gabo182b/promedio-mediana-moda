@@ -1,7 +1,6 @@
 // Promedio / Media aritmetica
 function arithmeticMeanCalculator(data) {
   const arraySum = data.reduce((acc, el) => acc + el, 0); //acc = 0
-
   const average = arraySum / data.length;
   return average;
 }
@@ -50,9 +49,13 @@ function modeCalculator(data) {
     (elA, elB) => elA[1] - elB[1]
   );
 
+  console.log(newArray);
+
   const mode = newArray[newArray.length - 1];
 
-  return mode;
+  console.log(mode);
+
+  return `La moda es el número ${mode[0]}, se repite ${mode[1]} veces`;
 }
 
 // Media aritmetica ponderada
@@ -135,3 +138,85 @@ function geometricMeanCalculator(data) {
 
   return geometricMean;
 }
+
+//-----HTML CONNECTION-------
+
+function mean() {
+  const input = document.getElementById("meanInput");
+  const inputToString = input.value;
+  const inputToArray = inputToString.split(",").map((n) => {
+    return parseInt(n);
+  });
+  const meanCalculation = arithmeticMeanCalculator(inputToArray);
+  const result = document.getElementById("meanResult");
+
+  result.textContent = meanCalculation;
+}
+
+function meadian() {
+  const input = document.getElementById("medianInput");
+  const inputToString = input.value;
+  const inputToArray = inputToString.split(",").map((n) => {
+    return parseInt(n);
+  });
+  const medianCalculation = medianCalculator(inputToArray);
+  const result = document.getElementById("medianResult");
+
+  result.textContent = medianCalculation;
+}
+
+function mode() {
+  const input = document.getElementById("modeInput");
+  const inputToString = input.value;
+  console.log(inputToString);
+  const inputToArray = inputToString.split(","); /*.map((n) => {
+  //   return parseInt(n);
+  // });*/
+  const modeCalculation = modeCalculator(inputToArray);
+  const result = document.getElementById("modeResult");
+
+  result.textContent = modeCalculation;
+}
+
+// function getData() {
+//   class Notes {
+//     constructor(course, note, credit) {
+//       this.course = course;
+//       this.note = note;
+//       this.credit = credit;
+//     }
+//   }
+
+//   let course = document.getElementById("courseInput").value;
+//   let note = document.getElementById("noteInput").value;
+//   let credit = document.getElementById("creditInput").value;
+
+//   newNotes = new Notes(course, note, credit);
+
+//   addData();
+
+//   document.getElementById("courseInput").value = "";
+//   document.getElementById("noteInput").value = "";
+//   document.getElementById("creditInput").value = "";
+// }
+
+// function addData() {
+//   let notesData = [];
+//   notesData.push(newNotes);
+//   document.getElementById("table").innerHTML +=
+//     "<tbody><td>" +
+//     newNotes.course +
+//     "</td><td>" +
+//     newNotes.note +
+//     "</td><td>" +
+//     newNotes.credit +
+//     "</td></tbody>";
+// }
+
+// function ponderedArithmeticMean() {
+//   result = ponderedArithmeticMeanCalculator(notesData);
+//   document.getElementById("ponderedArithmeticMeanResult");
+//   result.textContent = result;
+// }
+
+f;
