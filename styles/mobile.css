@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.9rem;
+  background-color: #272640;
+  color: white;
+}
+
+.header {
+  text-align: center;
+  background-color: #312244;
+  padding: 1rem;
+}
+
+.container {
+  display: flexbox;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 1rem;
+  margin-top: -0.2rem;
+  padding: 1rem;
+}
+
+.form {
+  background-color: #1b3a4b;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 0.4rem solid #065a60;
+}
+.form h3 {
+  margin: 0.1rem;
+}
+
+.form-container {
+  margin-top: 0.5rem;
+  border: 0.3rem solid #065a60;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.form-container .main-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container .main-form .form-input {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+  border: 0.2rem #006466 solid;
+}
+
+.form-container .main-form .result-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.9rem;
+  border: 0.2rem #006466 solid;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: white;
+  color: black;
+  font-size: 1.6rem;
+}
+
+.form-container .main-form .result-container .result {
+  margin-left: 9rem;
+}
+
+.form-container .form-button {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+}

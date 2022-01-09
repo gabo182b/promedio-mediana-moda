@@ -108,3 +108,9 @@ dist
 
 # Prettier
 .prettierrc
+
+# Extra Javascript
+test.js
+
+# Extra HTML
+indextest.html
